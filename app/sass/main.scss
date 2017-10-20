@@ -1,4 +1,5 @@
 @import 'smart-grid';
+@include reset();
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700&subset=cyrillic,cyrillic-ext');
 $primary-font: 'Roboto Condensed', sans-serif;
 $accent-font: 'Roboto', sans-serif;
@@ -23,14 +24,20 @@ body {
 	@include row-flex;
 	@include md(justify-content, center)
 	justify-content: center;
+	@include wrapper();
+	position: fixed center;
+	margin: 0 auto;
 	& .logo {
 		order: 1;
 		
 		@include col();
 		@include size(3);
-		@include size-md(6);
+		@include size-lg(3);
+		@include size-md(5);
 		@include size-xs(12);
 		text-align: right;
+		height: 100px;
+		padding-top: 20px;
 	}
 	& .menu {
 		
@@ -43,7 +50,7 @@ body {
 		@include col-padding();
 		display: flex;
 		flex-wrap: nowrap;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: flex-end;
 
 
@@ -62,7 +69,7 @@ body {
 			&:hover:after {
 				display: block;
 				content: " ";
-				top: 35px;
+				top: 40px;
 				width: 100%;
 				height: 10px;
 				position: absolute;
@@ -79,6 +86,7 @@ body {
 		
 		@include col();
 		@include size(4);
+		@include size-lg(5);
 		@include size-md(4);
 		@include size-xs(12);
 		height: 100%;
@@ -86,6 +94,7 @@ body {
 		& .contacts__container {
 			@include md(float, right);
 			display: inline-block;
+			padding-top: 20px;
 			& span {
 				display: block;
 				text-align: right;
@@ -113,6 +122,7 @@ body {
 			font-family: $primary-font;
 			font-weight: 700;
 			color: $primary-color;
+			margin-left: 20px;
 		}	
 	}
 }
@@ -125,20 +135,23 @@ body {
 	& .slider-container {
 		display: block;
 		margin: 0 auto;
-		position: relative;
+		
+		width: 100%;
+		min-height: 452px;
+		background: url('../img/back.jpg') no-repeat center center;
+		
+		//position: relative;
+		//text-align: center;
 		& .caption {
-			position: absolute;
-	    
-	    top: 83px;
-	    left: 282px;
+			@include wrapper();
+			
+			margin: auto auto;
 	    & .orange {
-		    margin-left: 217px;
-		    margin-top: -57px;
+				
 		    width: 450px;
 				height: 140px;
 				background: $secondary-color;
-				padding-left: 60px;
-				padding-top: 60px;
+
 				font-family: $primary-font;
 				font-weight: 300;
 				font-size: 18px;
@@ -147,8 +160,7 @@ body {
 			& h1 {
 				display: block;
 				font-family: $primary-font;
-				padding-left: 150px;
-				padding-top: 100px;
+
 				font-size: 72px;
 				color: $white-color;
 				font-weight: 700;
@@ -180,6 +192,7 @@ body {
 	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%);
 	background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.01) 99%, rgba(0,0,0,0) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+	@include wrapper();
 
 	& .news-item {
 		@include col();
@@ -224,9 +237,10 @@ body {
 	@include size(8);
 	@include size-md(10);
 	@include size-xs(12);
+	@include wrapper();
 	
 	
-	margin: 0 auto;
+	//margin: 0 auto;
 } 
 
 ////////// MAIN   /////////// MAIN   /////////// MAIN   //////////
@@ -301,13 +315,20 @@ body {
 		& .list-item {
 			$white-color-space: nowrap;
 			display: block;
+			width: 100%;
+			text-align: left;
 			font-family: $primary-font;
 			font-size: 20px;
 			color: $white-color;
 			text-decoration: none;
+			background-color: $grey-color;
 			padding: 8px 0 8px 40px;
 			@include md(padding, 8px 8px);
 			@include xs(padding, 8px 8px);
+
+			&:hover {
+				background-color: lighten($grey-color,10%);
+			}
 			
 			& .bg-services {
 			  width: 20px; height: 20px;
