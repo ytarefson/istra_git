@@ -4,10 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>ТД Истра</title>
-	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/owl.theme.default.css">	
+	<link rel="stylesheet" href="css/main.css">	
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 	<!-- шапка -->
@@ -32,7 +36,7 @@
 					<a class="contacts__mail" href="mailto:tdistra@mail.ru">tdistra@mail.ru</a>
 				</div>
 				<!-- адрес -->
-				<span class="contacts__adres">г. Ярославль,<br> ул. Гоголя 22-Б</span>
+				<div class="adres__container"><span class="contacts__adres">г. Ярославль,<br> ул. Гоголя 22-Б</span></div>
 			</div>
 			<div class="clearfix"></div>
 		</div>
@@ -40,18 +44,20 @@
 
 	<!-- конец шапки -->
 
+
 	<!-- начало слайдера -->
 	<div class="slider">
 		<!-- заголовок слайдера -->
 		<div class="slider-container">
-			<img src="img/back.jpg" alt="background" height="452px">
-			<div class="caption">
-				<h1>ТД ИСТРА<br>
-					<span>группа компаний</span>
-				</h1>
-				<div class="orange">
-					Бытовая химия. <br>Профессиональная химия<br> для прачечных.<br> Продажа. Доставка.
-				</div>
+			<!-- <img src="img/back.jpg" alt="background" height="452px"> -->
+			<div class="caption__wrapper">
+				<div class="caption">
+					<h1>
+						<span>Торговый Дом<br></span>ИСТРА
+					</h1>
+					<p>Бытовая химия. <br>Профессиональная химия для прачечных.<br>Санитарно-гигиеническая продукция</p>
+					</div>
+				</div>	
 			</div>
 		</div>
 	</div>
@@ -61,30 +67,53 @@
 	<section class="news">		
 			
 		<div class="news-item">
-			<p><h2>рестайлинг интернет портала</h2>
-			<div class="news-date">08/11/2018</div><br>
-			<h3>Добро пожаловать!</h3><br>Дорогие друзья, мы рады вам сообщить что наш интерент-портал притерпел ряд изменений. Прогресс не стоит на месте и чтобы вместе с вами быть частью этого процесса, мы представляем вашему вниманию нашу новую страничку. Опираясь на ваши предложения мы переработали дизайн и функционал. Теперь основная информация располагается на одном листе.</p>
+			<h2>рестайлинг интернет портала</h2>
+			<div class="date-container">
+				<div class="news-date">08/11/2018</div>
+				<span class="outline"></span>
+			</div>
+			<br>
+			<h3>Добро пожаловать!</h3><br>
+			<p>Дорогие друзья, мы рады вам сообщить что наш интерент-портал притерпел ряд изменений. Прогресс не стоит на месте и чтобы вместе с вами быть частью этого процесса, мы представляем вашему вниманию нашу новую страничку. Опираясь на ваши предложения мы переработали дизайн и функционал. Теперь основная информация располагается на одном листе.</p>
 			<br><br>
-			<p>
-				<ul>
-					<li>Новости нашей компании</li>
-					<li>акции и спецпредложения</li>
-					<li>каталог товаров и удобная навигация по категориям</li>
-					<li>публикации о перспективных напрвлениях</li>
-					<li>гостевая книга</li>
-					<li>быстрый доступ к прайсу</li></ul>
-					<br>
-				Для удобства поиска, в каталоге на Главной странице, представленны самые популярные предложения.</p>
+			<ul>
+				<li>Новости нашей компании</li>
+				<li>акции и спецпредложения</li>
+				<li>каталог товаров и удобная навигация по категориям</li>
+				<li>публикации о перспективных напрвлениях</li>
+				<li>гостевая книга</li>
+				<li>быстрый доступ к прайсу</li></ul>
+				<br>
+			<p>Для удобства поиска, в каталоге на Главной странице, представленны самые популярные предложения.</p>
 		</div>
 	</section>
 	<!-- конец новостей -->
+	
+	<!-- новые услуги -->
+	<section class="services">
+		<div class="services__container">
+			<div class="services__desc">
+				<h2>профессиональная химия для прачечных</h2>
+				<p>Стирка спецодежды автосервисов, лакокрасочных производств и хлебозаводов - это довольно специфичный и интересный способ обработки изделий. Всем известно, что масло растворяется в воде, а удаление консистентных смазок и пригоревших жиров с поверхности ткани вопрос который можно решить только процессом химической чистки изделий. <br>
+				Мы предлагаем готовые решения для стирки, чистки и пятновыведения для всех типов прачечных и химчисток, моющее и чистящие средства для пищевой промышленности (мясной, молочной, базалкогольной и др.), препараты для профессионального автоклинига, кнлининга HoReCa</p>
+				<div class="services__buttons buttons">
+					<a href="#" class="buttons__download-price">Скачать прайс</a>
+					<a href="#" class="buttons__catalog">Каталог</a>
+				</div>
+			</div>
 
-	<!-- начало враппера -->
-	<div class="wrapper">
+			<div class="sevices__img">
+				<div class="profchem"></div>
+				<img src="img/profchem.jpg" alt="Профессиональная техника">
+			</div>
 
-		<!-- начало главное раздела -->
-		<section class="main">
+		</div>
+	</section>
+	<!-- конец новых услуг -->
 
+	<!-- начало нового каталога -->
+	<section class="main">
+		<div class="main__container">
 			<!-- начало субконтента -->
 			<div class="subcontent">
 
@@ -92,25 +121,73 @@
 				<div class="catalog-block">
 					
 					<ul class="catalog-menu">
-						<li class="heading__container"><span class="list-icon bg-list"></span><span class="heading">каталог</span></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-oborudovanie"></span>Оборудование</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-brands"></span>Бренды</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-salf"></span>Салфетки</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-wash"></span>Мыло</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-paper"></span>Туалетная бумага</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-inventory"></span>Инвентарь</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-services"></span>Наши услуги</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-delivery"></span>Доставка</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-partners"></span>Партнеры</a></li>
-						<li><a href="#" class="list-item"><span class="list-icon bg-price"></span>Цены</a></li>
+						<li class="heading__container">
+							<span class="list-icon bg-list"></span>
+							<span class="heading">каталог</span>
+						</li>
+						<li>
+							<button id="rolltowel" class="catalog__nav list-item">
+								Туалетная бумага</button>
+						</li>						
+						<li>
+							<button id="liquid-soap" class="catalog__nav list-item">
+								Жидкое мыло</button>
+						</li>
+						<li>
+							<button id="airfresh" class="catalog__nav list-item">
+								Освежители воздуха</button>
+						</li>
+						<li>
+							<button id="medical" class="catalog__nav list-item">
+								Бытовая химия</button>
+						</li>			
+						<li>
+							<button id="altsept" class="catalog__nav medex-item">
+								Материалы для протирки</button>
+						</li>
+						<li>
+							<button id="dispenser" class="catalog__nav medex-item">
+								Диспенсеры</button>
+						</li>
+						<li>
+							<button id="profchem" class="catalog__nav profchem-item">
+								Профессиональная химия</button>
+						</li>
+						
+						<ul class="menu__brands">
+							<li><span class="heading brands__caption">бренды</span></li>
+							<li><button id="tork" class="catalog__nav brand-item">
+								Tork</button></li>
+							<li><button id="heva" class="catalog__nav brand-item">
+								Heva</button></li>
+							<li><button id="focus" class="catalog__nav brand-item">
+								Focus</button></li>
+							<li><button id="russia" class="catalog__nav brand-item">
+								Российский производитель</button></li>
+						</ul>
+					
+						
+						
+						
 					</ul>
 				</div>
 				<!-- конец управления каталогом -->
 
 				<!-- рекламный блок -->
 				<div class="advertise">
-					<h3>доставка и партнерские программы</h3>
-					<p>мы заботимся о наших клиентах</p>
+					<h3>Доставка</h3>
+					<h4>Мы заботимся о наших клиентах!</h4>
+					<p>Мы берём на себя заботы по доставке ваших заказов. Сделав заказ более чем на 1000 рублей мы сами все вам привезем.<br><br>
+						<ul>Регионы доставки
+							<li>Ярославль и обл.</li>
+							<li>Ивановская обл.</li>
+							<li>Костромская обл.</li>
+						</ul>
+					</p>
+				</div>
+				<div class="advertise">
+					<h3>Партнёрские программы</h3>
+					<p>В нашем каталоге и прайсе, для удобства, представлены розничные цены. Однако наша ценовая политика позволяет находить выгодный подход для каждого клиента.</p>
 				</div>
 				<!-- конец рекламного блока -->
 
@@ -119,142 +196,195 @@
 
 			<!-- начало контента -->
 			<div class="content">		
-				<h2>Каталог &gt; Товары &gt; Туалетная бумага</h2>	
+				<!-- <h2>Каталог &gt; Туалетная бумага</h2>	 -->
 
 				<div class="products">
 
 					<div class="product">
-						<div class="product__id">120067</div>
-						<div class="product__desc">
-							Tork Matic® полотенца в рулонах (целлюлоза)<br>
-							Состав: Целлюлоза<br>	
-							Кол-во слоев: 2; <br>
-							Длина рулона м: 150; <br>
-							Ширина листа мм: 210;<br>
-							Длина листа мм: 250;<br>
-							Кол-во листов в рулоне: 600;<br>
-							Количество в упаковке:6 рул.<br>
-							Цена за рулон -461.38 руб.<br>
+						
+						<div class="product__is">
+							<h3 class="product__name">Tork Matic® полотенца в рулонах (целлюлоза)</h3>
+							<p class="product__desc">
+								Состав: Целлюлоза<br>	
+								Кол-во слоев: 2; <br>
+								Длина рулона м: 150; <br>
+								Ширина листа мм: 210;<br>
+								Длина листа мм: 250;<br>
+								Кол-во листов в рулоне: 600;<br>
+								Количество в упаковке:6 рул.<br>
+								
+							</p>
+							
 						</div>
-						<div class="product__image"><img src="img/products/medex11.jpg" alt="product" width="134px" height="134px"></div>
+						<div class="product__image"><img src="img/products/papia.jpg" alt="product" width="170px" height="170px"><span class="product__price">Цена: 500</span><div class="product__id">ID: 120067</div></div>
 					</div>
 					<div class="product">
-						<div class="product__id">120067</div>
-						<div class="product__desc">
-							Tork Matic® полотенца в рулонах (целлюлоза)<br>
-							Состав: Целлюлоза<br>	
-							Кол-во слоев: 2; <br>
-							Длина рулона м: 150; <br>
-							Ширина листа мм: 210;<br>
-							Длина листа мм: 250;<br>
-							Кол-во листов в рулоне: 600;<br>
-							Количество в упаковке:6 рул.<br>
-							Цена за рулон -461.38 руб.<br>
+						
+						<div class="product__is">
+							<h3 class="product__name">Tork Matic® полотенца в рулонах (целлюлоза)</h3>
+							<p class="product__desc">
+								Состав: Целлюлоза<br>	
+								Кол-во слоев: 2; <br>
+								Длина рулона м: 150; <br>
+								Ширина листа мм: 210;<br>
+								Длина листа мм: 250;<br>
+								Кол-во листов в рулоне: 600;<br>
+								Количество в упаковке:6 рул.<br>
+								
+							</p>
+							
 						</div>
-						<div class="product__image"><img src="img/products/medex11.jpg" alt="product" width="134px" height="134px"></div>
+						<div class="product__image"><img src="img/products/papia.jpg" alt="product" width="170px" height="170px"><span class="product__price">Цена: 500</span><div class="product__id">ID: 120067</div></div>
 					</div>
 					<div class="product">
-						<div class="product__id">120067</div>
-						<div class="product__desc">
-							Tork Matic® полотенца в рулонах (целлюлоза)<br>
-							Состав: Целлюлоза<br>	
-							Кол-во слоев: 2; <br>
-							Длина рулона м: 150; <br>
-							Ширина листа мм: 210;<br>
-							Длина листа мм: 250;<br>
-							Кол-во листов в рулоне: 600;<br>
-							Количество в упаковке:6 рул.<br>
-							Цена за рулон -461.38 руб.<br>
+						
+						<div class="product__is">
+							<h3 class="product__name">Tork Matic® полотенца в рулонах (целлюлоза)</h3>
+							<p class="product__desc">
+								Состав: Целлюлоза<br>	
+								Кол-во слоев: 2; <br>
+								Длина рулона м: 150; <br>
+								Ширина листа мм: 210;<br>
+								Длина листа мм: 250;<br>
+								Кол-во листов в рулоне: 600;<br>
+								Количество в упаковке:6 рул.<br>
+								
+							</p>
+							
 						</div>
-						<div class="product__image"><img src="img/products/medex11.jpg" alt="product" width="134px" height="134px"></div>
+						<div class="product__image"><img src="img/products/papia.jpg" alt="product" width="170px" height="170px"><span class="product__price">Цена: 500</span><div class="product__id">ID: 120067</div></div>
 					</div>
 					<div class="product">
-						<div class="product__id">120067</div>
-						<div class="product__desc">
-							Tork Matic® полотенца в рулонах (целлюлоза)<br>
-							Состав: Целлюлоза<br>	
-							Кол-во слоев: 2; <br>
-							Длина рулона м: 150; <br>
-							Ширина листа мм: 210;<br>
-							Длина листа мм: 250;<br>
-							Кол-во листов в рулоне: 600;<br>
-							Количество в упаковке:6 рул.<br>
-							Цена за рулон -461.38 руб.<br>
+						
+						<div class="product__is">
+							<h3 class="product__name">Tork Matic® полотенца в рулонах (целлюлоза)</h3>
+							<p class="product__desc">
+								Состав: Целлюлоза<br>	
+								Кол-во слоев: 2; <br>
+								Длина рулона м: 150; <br>
+								Ширина листа мм: 210;<br>
+								Длина листа мм: 250;<br>
+								Кол-во листов в рулоне: 600;<br>
+								Количество в упаковке:6 рул.<br>
+								
+							</p>
+							
 						</div>
-						<div class="product__image"><img src="img/products/medex11.jpg" alt="product" width="134px" height="134px"></div>
+						<div class="product__image"><img src="img/products/papia.jpg" alt="product" width="170px" height="170px"><span class="product__price">Цена: 500</span><div class="product__id">ID: 120067</div></div>
 					</div>
 
 				</div>
 				<div class="clearfix"></div>
-			</div>
-			
-		</section>
-		<!-- конец главного раздела -->
 
-		<!-- начало услуг -->
-		<section class="services">
-			<div class="services__container">
-				<h2>Клиниговые <br>услуги</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla repudiandae quod nisi officiis veritatis, soluta illo dolorum delectus sint exercitationem dolore, non libero eveniet consequatur debitis magni veniam maiores? Voluptas impedit repellat numquam magni a, vel ad nemo sed, harum est natus voluptate illo possimus nulla saepe ipsa veritatis delectus? Atque minus, non vitae laborum alias maiores repudiandae? Asperiores non similique dolores cumque nostrum in ut fugiat cupiditate, officiis laudantium iste necessitatibus pariatur reiciendis, nobis enim architecto veritatis vel excepturi minus, expedita commodi tempora ab deleniti. Quo minima ex illo nostrum atque. Fugit, quasi sapiente mollitia ratione temporibus explicabo ullam laudantium. Id sapiente ipsum ab, quasi optio qui quam assumenda perferendis veritatis vel rerum enim labore voluptates, culpa maiores sed?.</p>
+		</div>
+	</section>
+	<!-- конец нового каталога -->
+	
+	<!-- начало карусели -->
+	<section class="carousel__section">
+		<div class="carousel__container">
+			<div class="carousel">
+				<div class="owl-carousel">
+	 			</div>
 			</div>
-			<div class="services-img"><!-- <img src="img/profchem.jpg" alt="Профессиональная техника"> --></div>
-			<div class="clearfix"></div>
-		</section>
-		<!-- конец услуг -->
+		</div>
+	</section>
+			
+	<!-- конец карусели -->
+
+	<!-- начало враппера -->
+	<!-- <div class="wrapper"> -->
+
+	
 
 		<!-- начало средств гигиены -->
 		<section class="aids">
-			<div class="aids-container">
-				<div class="aids-img"><!-- <img src="img/gigiena.jpg" alt="средства гигиены"> --></div>
-				<h2>Средства гигиены</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reprehenderit quasi suscipit sint fugit nemo? Sapiente consequuntur nostrum exercitationem nihil odio fugit, dolore, in obcaecati commodi voluptatum aliquam quod aspernatur ex totam assumenda placeat! Eligendi laboriosam, pariatur in tempora minus, autem veritatis quis dolore necessitatibus dolorem animi ullam fugiat, mollitia.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla harum qui corporis non quod a impedit fugit autem nisi, deleniti, animi eligendi ipsa repudiandae veniam. Consequatur perferendis a commodi aut ducimus nemo veritatis autem saepe necessitatibus dicta laudantium dolorem impedit neque, reiciendis, mollitia illo, unde suscipit. In aut voluptate eaque expedita non facere atque iure eum odio consequuntur. Accusantium temporibus tempore perspiciatis nobis est, ducimus fuga neque nihil itaque possimus autem, culpa et sunt in maiores. Ea porro, voluptate alias quasi, optio fugit eius nisi! Ratione aliquam beatae laboriosam minima blanditiis laborum, quae eligendi vero, eius neque nostrum minus quos, quas molestiae corporis voluptatibus nisi aspernatur consectetur modi tenetur adipisci in. Accusamus minima, dolorem consequatur, corporis saepe excepturi ab delectus tempora natus est repudiandae nam maxime quos laborum? Possimus quisquam laborum fuga, deleniti porro. Blanditiis dolores, enim eligendi, consequatur soluta sint quidem unde accusantium atque! Error ipsa expedita esse modi.</p>
+			<div class="aids__container">
+				<div class="aids__img"><img src="img/chem.png" alt="средства гигиены">
+					<div class="aids__buttons buttons">
+						<a href="#" class="buttons__download-price">Скачать прайс</a>
+						<a href="#" class="buttons__catalog">Каталог</a>
+					</div>
+				</div>
+				<div class="aids__desc">
+					<h2>бытовая химия и средства личной гигиены</h2>
+					<p>Мы готовы предложить Вам высококачественные бумажные полотенца, большой выбор туалетной бумаги, салфетки, продукцию медицинского начначения, протирочные материалы для промышленного производства, диспенсеры, держатели, различные расходные материалы, пергаменты, жидкое и пенное мыло. <br>
+					Так же занимаемся комалектацией средствами гигиены:</p>
+					<ul>
+						<li>медицинских учреждений,</li>
+						<li>административных и торговых центров,</li>
+						<li>заведений общепита,</li>
+						<li>школ, ВУЗов и дестких садов,</li>
+						<li>заводов и промышленных предприятий,</li>
+						<li>гостиниц.</li>
+					</ul>
+			
+					<p>Мы постоянно расширяем спектр наших товаров, что бы самые требовательные клиенты могли комплексно обеспечить себя всем необходимым.</p>
+				</div>
 			</div>
-			<div class="clearfix"></div>
+			
 		</section>
 		<!-- конец средств гигиены -->
 
 		<section class="reviews">
-			<div class="review">
-				<figure>
-					<img src="img/face.jpg" alt="face">
-					<figcaption>Владимир<br><span>08.11.2017</span></figcaption>
-				</figure>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est saepe nihil quod sed odio veniam, accusamus dolorum, voluptas, nostrum ab dolore quas consectetur dolorem ullam.</p>
-			</div>
-			<div class="review">
-				<figure>
-					<img src="img/face.jpg" alt="face">
-					<figcaption>Елена<br><span>08.11.2017</span></figcaption>
-				</figure>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum commodi debitis rerum ipsam modi nemo sint inventore. Tempora corporis et consequuntur est. Perspiciatis, sunt, debitis!</p>
+			<div class="reviews__container">
+				<div class="review">
+					<figure>
+						<img src="img/face.jpg" alt="face">
+						<figcaption>Владимир<br><span>08.11.2017</span></figcaption>
+					</figure>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est saepe nihil quod sed odio veniam, accusamus dolorum, voluptas, nostrum ab dolore quas consectetur dolorem ullam.</p>
+				</div>
+				<div class="review">
+					<figure>
+						<img src="img/face.jpg" alt="face">
+						<figcaption>Елена<br><span>08.11.2017</span></figcaption>
+					</figure>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum commodi debitis rerum ipsam modi nemo sint inventore. Tempora corporis et consequuntur est. Perspiciatis, sunt, debitis!</p>
+				</div>
 			</div>
 		</section>
-	</div>
+<!-- 	</div> -->
 	<!-- конец враппера -->
 
 	<!-- начало футера -->
-	<footer>
-		<div class="footer-nav">
-			<ul class="container">
-				<li class="link"><a href="#">главная</a></li>
-				<li class="link"><a href="#">каталог</a></li>
-				<li class="link"><a href="#">услуги</a></li>
-				<li class="link"><a href="#">прайс</a></li>
-				<li class="link"><a href="#">контакты</a></li>
-			</ul>
-		</div>
-		<div class="footer-contacts">
-			<div class="contacts">
-				<div class="contacts__container">
-					<span class="contacts__tel">(4852)58-00-33, 58-00-44</span>
-					<span class="contacts__fax">(факс)26-02-01</span>
-					<a class="contacts__mail" href="mailto:tdistra@mail.ru">tdistra@mail.ru</a>
-				</div>
-				<!-- адрес -->
-				<span class="contacts__adres">г. Ярославль,<br> ул. Гоголя 22-Б</span>
+	<div class="footer__navigation">
+
+			<div class="nav__container">
+				
+					<ul class="container">
+						<li class="link"><a href="#">главная</a></li>
+						<li class="link"><a href="#">каталог</a></li>
+						<li class="link"><a href="#">услуги</a></li>
+						<li class="link"><a href="#">прайс</a></li>
+						<li class="link"><a href="#">контакты</a></li>
+					</ul>
+				
 			</div>
+<!-- 		 -->
+	</div>
+	<footer>
+		<div class="footer__container">
+			<div class="footer__col footer__logo">
+				<a href="#"><img src="img/logo.png" alt="Логотип ТД ИСТРА"></a>
+			</div>
+			<div class="footer__col footer__adres">
+				<h4>адрес:</h4>
+				<p>Россия, Ярославская область г. Ярославль, ул. Гоголя 22-Б 150030</p>
+			</div>
+			<div class="footer__col footer__phone">
+				<h4>телефоны:</h4>
+				<span>(4852) 58-00-33</span><br>
+				<span>58-00-44</span><br>
+				<span>(факс) 26-02-01</span>
+			</div>
+			<div class="footer__col footer__mail">
+				<h4>e-mail:</h4>
+				<a href="mailto:tdistra@mail.ru">tdistra@mail.ru</a>
+			</div>
+		
 		</div>
+			
 	</footer>
 	<!-- конец футера -->
 </body>

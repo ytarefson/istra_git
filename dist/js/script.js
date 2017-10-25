@@ -1,86 +1,130 @@
 $(document).ready( function() {
-  var products = [];
-  products = [ 
-  {
-    id:1, 
-    name: "htc",
-    href: "../img/sample/phone1.png",
-    price: 1000,
-    desc: "Description of htc"
-  }
-  ];
-/*  {
-    id:2, 
-    name: "samsung",
-    href: "../img/sample/phone2.png",
-    price: 1000,
-    desc: "Description of samsung"
-  },
-  {
-    id:3, 
-    name: "apple",
-    href: "../img/sample/phone3.png",
-    price: 1000,
-    desc: "Description of apple"
-  },
-  {
-    id:4, 
-    name: "huawei",
-    href: "../img/sample/phone4.png",
-    price: 1000,
-    desc: "Description of huawei"
-  },
-  {
-    id:5, 
-    name: "nokia",
-    href: "../img/sample/phone5.png",
-    price: 1000,
-    desc: "Description of nokia"
-  },
-  {
-    id:6, 
-    name: "motorolla",
-    href: "../img/sample/phone6.png",
-    price: 1000,
-    desc: "Description of motorolla"
-  },
-  {
-    id:7, 
-    name: "lg",
-    href: "../img/sample/phone7.png",
-    price: 1000,
-    desc: "Description of lg"
-  },
-  {
-    id:8, 
-    name: "asus",
-    href: "../img/sample/phone8.png",
-    price: 1000,
-    desc: "Description of asus"
-  },
-  {
-    id:9, 
-    name: "lenovo",
-    href: "../img/sample/phone9.png",
-    price: 1000,
-    desc: "Description of lenovo"
-  },
-  {
-    id:10, 
-    name: "fly",
-    href: "../img/sample/phone10.png",
-    price: 1000,
-    desc: "Description of fly"
-  },
-  {
-    id:11, 
-    name: "xiaomi",
-    href: "../img/sample/phone11.png",
-    price: 1000,
-    desc: "Description of xiaomi"
-  }
-];
-*/
-console.log(products.length);
-});
 
+
+
+
+
+  $.ajax({
+    type: "GET",
+    url: 'js/products.json',    
+    dataType: "json",
+    success: function(data) {
+      var Data = [];
+      Data = data;
+      var result = "";
+      for (var i = 1; i<data.length ; i++) {          
+        result += render(data[i]);
+      }
+      $('.products').text('');
+      $('.products').append(result);
+    },
+  });
+
+  $('.list-item').on('click', function() { 
+      var id = this.id;      
+      $.ajax({
+      type: "GET",
+      content: 'this',
+      url: 'js/products.json',      
+      dataType: "json",
+      success: function(data) {
+        var result = "";
+        var selector = 'data[i].'+id;
+        for (var i = 1; i<data.length ; i++) {      
+          if (data[i].category==id) {
+            result += render(data[i]);
+          }
+        }
+        $('.products').text('');
+        $('.products').append(result);
+      },
+    });
+
+  })
+
+  $('.brand-item').on('click', function() { 
+    var brand = this.id;      
+    $.ajax({
+      type: "GET",
+      content: 'this',
+      url: 'js/products.json',      
+      dataType: "json",
+      success: function(data) {
+        var result = "";
+        
+        for (var i = 1; i<data.length ; i++) {      
+          if (data[i].brand==brand) {
+            result += render(data[i]);
+          }
+        }
+        $('.products').text('');
+        $('.products').append(result);
+      },
+    });
+
+   })
+
+    $('.medex-item').on('click', function() { 
+    var category = this.id;   
+    console.log(category);
+    $.ajax({
+      type: "GET",
+      content: 'this',
+      url: 'js/medex.json',      
+      dataType: "json",
+      success: function(data) {
+        console.log('kk');
+
+        var result = "";        
+        for (var i = 1; i<data.length ; i++) {      
+          if (data[i].category==category) {
+            result += render(data[i]);
+          }
+        }
+        $('.products').text('');
+        $('.products').append(result);
+      },
+    });
+
+   });
+
+  $('.profchem-item').on('click', function() { 
+    var category = this.id;      
+    $.ajax({
+      type: "GET",
+      content: 'this',
+      url: 'js/profchem.json',      
+      dataType: "json",
+      success: function(data) {
+        console.log('kk');
+
+        var result = "";        
+        for (var i = 1; i<data.length ; i++) {      
+          if (data[i].category==category) {
+            result += render(data[i]);
+          }
+        }
+        $('.products').text('');
+        $('.products').append(result);
+      },
+    });
+
+   });
+
+
+  function render(data) {
+    var result = '';
+    var item = '<div class="product"><div class="product__is">';
+    item += '<h3 class="product__name">'+data.name+'</h3>';
+    item += '<p class="product__desc">'+data.desc+'</p></div>';
+    item += '<div class="product__image"><img src="'+data.href+'" width="170px" height="170px">';
+    item += '<span class="product__price">Цена: '+data.price+'</span>';
+    item += '<div class="product__id">ID: '+data.id+'</div></div>';
+    item += '</div>';
+    result += item;
+    return result;
+  }
+// возможно обьеденить в функцию 
+    
+
+});
