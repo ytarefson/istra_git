@@ -6,7 +6,7 @@ $break_md: 960px;
 $break_sm: 780px;
 $break_xs: 560px;
 
-$offset: 20px;
+$offset: 30px;
 $offset_lg: $offset;
 $offset_md: $offset;
 $offset_sm: $offset;
@@ -20,6 +20,7 @@ $offset_xs_one_side: ($offset_xs / 2);
 
 $fields: 30px;
 $fields_sm: 30px;
+$fields_xs: 5px;
 
 @mixin wrapper-full(){
     padding-left: $fields;
@@ -28,6 +29,11 @@ $fields_sm: 30px;
     @include sm-block(){
         padding-left: $fields_sm;
         padding-right: $fields_sm;
+    }
+
+    @include xs-block(){
+        padding-left: $fields_xs;
+        padding-right: $fields_xs;
     }
 }
 
