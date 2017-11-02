@@ -1,25 +1,22 @@
-<?php
 
-include 'catalog.php';
-
-?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>ТД Истра</title>
-
-	<!-- <link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/owl.theme.default.css">	 -->
+	<link rel="shortcut icon" href="img/favicon-16x16.png" type="image/png">
+	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href="css/owl.theme.default.css">	 
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/main.css">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="js/jquery.accordion.js"></script>
-	<script src="js/jquery.cookie.js"></script>
-	<!-- <script src="js/owl.carousel.min.js"></script> -->
-	<!-- <script src="js/script.js"></script> -->
+	
+	
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
 
@@ -27,26 +24,23 @@ include 'catalog.php';
 	<div class="nav">
 		<!-- контейнер шапки -->
 		<div class="nav__container">
-
 	 		<!-- логотип -->
 			<a class="logo" href="#"><img src="img/logo.png" alt="logo"  width="233px" height="68px"></a>
 			<!-- навигация -->
 			<div class="menu">
-				<a href="#" class="nav-link">главная</a>
-				<a href="#" class="nav-link">каталог</a>
-				<a href="#" class="nav-link">услуги</a>
-				<a href="#" class="nav-link">о нас</a>
+				<a href="/" class="nav-link">главная</a>
+				<a href="#catalog" class="nav-link">каталог</a>
+				<a href="services.php" class="nav-link">услуги</a>
+				<a href="delivery.php" class="nav-link">о нас</a>
 				<a href="#" class="nav-link">контакты</a>
 			</div>
 			<!-- контакты -->
 			<div class="contacts">
 				<div class="contacts__container">
 					<span class="contacts__tel">(4852)58-00-33, 58-00-44</span>
-					<span class="contacts__fax">(факс)26-02-01</span>
+					<!-- <span class="contacts__fax">(факс)26-02-01</span> -->
 					<a class="contacts__mail" href="mailto:tdistra@mail.ru">tdistra@mail.ru</a>
 				</div>
-				<!-- адрес -->
-				<!-- <div class="adres__container"><span class="contacts__adres">г. Ярославль,<br> ул. Гоголя 22-Б</span></div> -->
 			</div>
 			<div class="click">
 				<div class="click__buttons">
@@ -58,120 +52,172 @@ include 'catalog.php';
 		<!-- конец контейнера шапки -->
 	</div>
 	<!-- конец шапки -->
-
 	<!-- начало слайдера -->
 	<div class="slider">
 		<!-- заголовок слайдера -->
-		<div class="slider-container">
-			<!-- <img src="img/back.jpg" alt="background" height="452px"> -->
-		<div class="caption__wrapper">
+		<div class="slider-container">			
+			<div class="caption__wrapper">
 				<div class="caption animated bounceInLeft">
 					<span class="td">Торговый Дом</span>
 					<span class="istra">Истра</span>
 					<h1>Бытовая химия<br>Профессиональная химия для прачечных<br>Санитарно-гигиеническая продукция</h1>
 					</div>
 				</div>	
-			</div>
-			</div>
 		</div>
 	</div>
 	<!-- конец слайдера -->
-
 	<!-- начало новостей -->	
-	<section class="news">		
-			
-		<div class="news-item">
-			<h2>рестайлинг интернет портала</h2>
-			<div class="date-container">
+	<section class="news__section">				
+		<div class="news__container">			
+			<div class="date__container">
+				<span>Рестайлинг интернет портала</span>
 				<div class="news-date">08/11/2018</div>
-				<span class="outline"></span>
 			</div>
-			<br>
-			<h3>Добро пожаловать!</h3><br>
-			<p>Дорогие друзья, мы рады вам сообщить что наш интерент-портал притерпел ряд изменений. Прогресс не стоит на месте и чтобы вместе с вами быть частью этого процесса, мы представляем вашему вниманию нашу новую страничку. Опираясь на ваши предложения мы переработали дизайн и функционал. Теперь основная информация располагается на одном листе.</p>
-			<br><br>
-			<ul>
-				<li>Новости нашей компании</li>
-				<li>акции и спецпредложения</li>
-				<li>каталог товаров и удобная навигация по категориям</li>
-				<li>публикации о перспективных напрвлениях</li>
-				<li>гостевая книга</li>
-				<li>быстрый доступ к прайсу</li></ul>
-				<br>
-			<p>Для удобства поиска, в каталоге на Главной странице, представленны самые популярные предложения.</p>
+			<span class="dobro">Добро пожаловать!</span>
+			<div class="news_p">
+				<p>Дорогие друзья, мы рады вам сообщить что наш интерент-портал притерпел ряд изменений. Прогресс не стоит на месте и чтобы вместе с вами быть частью этого процесса, мы представляем вашему вниманию нашу новую страничку. Опираясь на ваши предложения мы переработали дизайн и функционал. Теперь основная информация располагается на одном листе.</p>
+				<ul>
+					<li type="circle">Новости нашей компании</li>
+					<li type="circle">акции и спецпредложения</li>
+					<li>каталог товаров и удобная навигация по категориям</li>
+					<li>публикации о перспективных напрвлениях</li>
+					<li>гостевая книга</li>
+					<li>быстрый доступ к прайсу</li>
+				</ul>
+				<p>Для удобства поиска, в каталоге на Главной странице, представленны самые популярные предложения.</p>
+			</div>
 		</div>
 	</section>
 	<!-- конец новостей -->
-
+ <!-- СЛАЙДЕР-КАРУСЕЛЬ -->
+	<div class="section__carousel">
+	<div class="container__carousel">
+		<div class="owl-carousel">
+			<div class="carousel__img img1"></div>
+			<div class="carousel__img img2"></div>
+			<div class="carousel__img img3"></div>
+			<div class="carousel__img img4"></div>
+			<div class="carousel__img img5"></div>
+			<div class="carousel__img img6"></div>
+		</div>
+	</div>
+</div>
 	<!-- начало нового каталога -->
 	<section class="new-cat">
 		<div class="new-cat__container">
 			<div class="new-cat__menu">
 				<ul class="new-cat__category">
-					<?php echo $categories_menu ?>
-					<li><a class="new-cat__link" href="#">Lorem ipsum.</a></li>
-					<li><a class="new-cat__link" href="#">Lorem ipsum.</a></li>
-					<li><a class="new-cat__link" href="#">Lorem ipsum.</a></li>
-					<li><a class="new-cat__link" href="#">Lorem ipsum.</a></li>
-					<li><a class="new-cat__link" href="#">Lorem ipsum.</a></li>
-					<li><a class="new-cat__link" href="#">Lorem ipsum.</a></li>
-				</ul>
-			</div>
-			<div class="new-cat__catalog">
-				<div class="new-cat__content">
-					<div class="new-cat__breadcrumbs"><?=$breadcrumbs;?>
-						<a href="#">Lorem.</a>
-						<a href="#">Recusandae.</a>
-						<a href="#">Iure!</a>
-					</div>
-					<br>
-					
-					<?php if($products): ?>
-						<?php foreach($products as $product): ?>
-
-							<div class="new-cat__product">
-													
-								<div class="product__is">
-									<h3 class="product__name"><?=$product['name']?></h3>
-									<p class="product__desc"><?=$product['content']?></p>
-									
-								</div>
-								<div class="product__image"><img src="img/products/<?=$product['image']?>" alt="product" width="170px" height="170px"><span class="product__price">Цена: <?=$product['price']?></span><div class="product__id">ID: <?=$product['id']?></div></div>
-							</div>
-
+					<li><button href="#" id="1" class="new-cat__category-link">Полотенца рулонные</button>
+						<ul class="new-cat__sublist invisible">
+							<li><button href="#" id="38" class="new-cat__link">полотенца рулонные TORK</button></li>
+							<li><button href="#" id="39" class="new-cat__link">полотенца Рулонные FOCUS</button></li>
+							<li><button href="#" id="40" class="new-cat__link">российский производитель</button></li>
+						</ul>
+					</li>
+					<li><button href="#" id="2" class="new-cat__category-link">Жидкое мыло</button>
+						<ul class="new-cat__sublist invisible">
+							<li><button href="#" id="34" class="new-cat__link">жидкое мыло TORK</button></li>
+							<li><button href="#" id="35" class="new-cat__link">мыло-пена TORK</button></li>
+							<li><button href="#" id="36" class="new-cat__link">жидкое мыло в канистрах 5л</button>	</li>
+							<li><button href="#" id="37" class="new-cat__link">российский производитель</button></li>
+						</ul>
+					</li>
+					<li><button href="#" id="3" class="new-cat__category-link">Освежители воздуха</button>
+						<ul class="new-cat__sublist invisible">
+							<li><button href="#" id="32" class="new-cat__link">освежители воздуха TORK</button></li>
+							<li><button href="#" id="33" class="new-cat__link">освежители воздуха HEVA</button></li>
+						</ul>
+					</li>
+					<li><button href="#" id="4" class="new-cat__category-link">Товары медицинского назначения</button>
+						<ul class="new-cat__sublist invisible">
+							<li><button href="#" id="28" class="new-cat__link">дозатор локтевой</button></li>
+							<li><button href="#" id="29" class="new-cat__link">бумажные медицинские простыни TORK</button></li>
+							<li><button href="#" id="30" class="new-cat__link">бумажные медицинские простыни РФ</button></li>
+							<li><button href="#" id="31" class="new-cat__link">бахилы</button></li>
+						</ul>
+					</li>
+					<li><button href="#" id="5" class="new-cat__category-link">антисептик, средства обеззараживания</button>
+						<ul class="new-cat__sublist invisible">
+						<li><button href="#" id="7" class="new-cat__link">жидкое мыло (шампунь, лосьон)</button></li>
+						<li><button href="#" id="8" class="new-cat__link">кожный антисептик</button></li>
+						<li><button href="#" id="41" class="new-cat__link">хлорсодержащее средство</button></li>
+						</ul>
+					</li>
+					<li><button href="#" id="6" class="new-cat__category-link">Диспенсеры</button>
+						<ul class="new-cat__sublist invisible">
+							<li><button href="#" id="10" class="new-cat__link">для салфеток</button></li>
+							<li><button href="#" id="11" class="new-cat__link">для полотенец</button></li>
+							<li><button href="#" id="12" class="new-cat__link">для жидкого мыла</button></li>
+							<li><button href="#" id="13" class="new-cat__link">для туалетной бумаги</button></li>
+							<li><button href="#" id="14" class="new-cat__link">для покрытий на унитаз</button></li>
+							<li><button href="#" id="15" class="new-cat__link">для аэрозольного освежителя воздуха</button></li>
+							<li><button href="#" id="16" class="new-cat__link">для листовых полотенец</button></li>
+							<li><button href="#" id="17" class="new-cat__link">для рулонных полотенец</button></li>
+							<li><button href="#" id="27" class="new-cat__link">для медицинских простыней</button></li>
+						</ul>
+					</li>
+					<li><button href="#" id="9" class="new-cat__category-link">Профессиональная химия для стирки</button>
+						<ul class="new-cat__sublist invisible">
+						<li><button href="#" id="42" class="new-cat__link">моющее средство НЕВСКИЙ</button></li>
+						<li><button href="#" id="18" class="new-cat__link">стиральные порошки</button></li>
+						</ul>
+					</li>
 						
-						<?php endforeach; ?>
-					<?php else: ?>
-						<p>Здесь товаров нет!</p>
-					<?php endif; ?>
+					<li><button href="#" id="19" class="new-cat__category-link">Уборочный инвентарь</button>
+						<ul class="new-cat__sublist invisible">
+							<li><button href="#" id="20" class="new-cat__link">универсальные уборочные тележки</button></li>
+							<li><button href="#" id="21" class="new-cat__link">комплектующие и запчасти</button></li>
+							<li><button href="#" id="22" class="new-cat__link">ведра для мытья полов и окон</button></li>
+							<li><button href="#" id="23" class="new-cat__link">держатели мопов (флаундеры)</button></li>
+							<li><button href="#" id="24" class="new-cat__link">рукоятки</button></li>
+							<li><button href="#" id="25" class="new-cat__link">мопы Россия</button></li>
+							<li><button href="#" id="26" class="new-cat__link">очистка пола и ровных поверхностней</button></li>
+						</ul>
+					</li>
+				</ul>
+		</div>
+			<div class="new-cat__catalog">
+				<div class="new-cat__heading">						
+					<div class="time">01/11/2017</div><span id="catalog">Каталог</span>
 				</div>
+				<div class="new-cat__content">					
+			    <div class="new-cat__product">
+			    	<div class="product__is">
+			    		<span class="product__id"><span class="product__category">Артикул</span>: 132165</span>
+				      <h4 class="product__name">Далеко-далеко за словесными.</h4>
+			        <p class="product__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+			        <span class="product__price">Цена: 1321,00 руб.</span>
+			      </div>
+			    	<div class="product__image">
+			    		<img src="img/products/papia.jpg" width="170px" height="170px">
+			    	</div>
+			    </div>
+			     
+			     
 			</div>
 		</div>
 	</section>
 	<!-- конец нового каталога -->
-
-	<!-- новые услуги -->
+<!-- новые услуги -->
 	<section class="services">
 		<div class="services__container">
 			<div class="services__desc">
 				<h2>профессиональная химия для прачечных</h2>
-				<p>Стирка спецодежды автосервисов, лакокрасочных производств и хлебозаводов - это довольно специфичный и интересный способ обработки изделий. Всем известно, что масло растворяется в воде, а удаление консистентных смазок и пригоревших жиров с поверхности ткани вопрос который можно решить только процессом химической чистки изделий. <br>
-				Мы предлагаем готовые решения для стирки, чистки и пятновыведения для всех типов прачечных и химчисток, моющее и чистящие средства для пищевой промышленности (мясной, молочной, базалкогольной и др.), препараты для профессионального автоклинига, кнлининга HoReCa</p>
+				<p>Мы предлагаем готовые решения для стирки, чистки и пятновыведения для всех типов прачечных и химчисток, моющее и чистящие средства для пищевой промышленности (мясной, молочной, базалкогольной и др.), препараты для профессионального автоклинига, кнлининга HoReCa. <br> <br>
+				Стирка спецодежды автосервисов, лакокрасочных производств и хлебозаводов - это довольно специфичный и интересный способ обработки изделий. Всем известно, что масло растворяется в воде, а удаление консистентных смазок и пригоревших жиров с поверхности ткани вопрос который можно решить только процессом химической чистки изделий.</p>
 				<div class="services__buttons buttons">
 					<a href="#" class="buttons__download-price">Скачать прайс</a>
-					<a href="#" class="buttons__catalog">Каталог</a>
+					<a href="#catalog" class="buttons__catalog">Каталог</a>
 				</div>
 			</div>
-
 			<div class="sevices__img">
-				<div class="profchem"></div>
-				<img src="img/profchem.jpg" alt="Профессиональная техника">
+				<div class="profchem">
+					<img src="img/profchem.jpg" alt="Профессиональная техника">
+				</div>				
 			</div>
-
 		</div>
 	</section>
 	<!-- конец новых услуг -->
-
 	<!-- начало карусели -->
 	<section class="carousel__section">
 		<div class="carousel__container">
@@ -180,43 +226,112 @@ include 'catalog.php';
 	 			</div>
 			</div>
 		</div>
-	</section>
-			
-	<!-- конец карусели -->
-
-	<!-- начало враппера -->
-	<!-- <div class="wrapper"> -->
-
-	
-
-		<!-- начало средств гигиены -->
-		<section class="aids">
-			<div class="aids__container">
-				<div class="aids__img"><img src="img/chem.png" alt="средства гигиены">
-					<div class="aids__buttons buttons">
-						<a href="#" class="buttons__download-price">Скачать прайс</a>
-						<a href="#" class="buttons__catalog">Каталог</a>
+	</section>			
+	<!-- конец карусели -->	
+	<!-- начало слайдера -->
+	<div class="slider">
+		<!-- заголовок слайдера -->
+		<div class="slider-container delivery">			
+			<div class="caption__wrapper">
+				<div class="delivery_wp animated bounceInLeft">
+					<span class="td">Торговый Дом</span>
+					<span class="istra">Истра</span>
+					<h1>Бытовая химия<br>Профессиональная химия для прачечных<br>Санитарно-гигиеническая продукция</h1>
 					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<!-- конец слайдера -->
+	<!-- начало секции ДОСТАВКА И КЛИНИНГ -->
+	<!-- контент начало -->
+	<section class="delivery__section">
+		<div class="delivery__container">
+			<div class="service1">
+				<div class="delivery__heading">
+					<h2>Клининговые Услуги</h2>
+					<i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
 				</div>
-				<div class="aids__desc">
-					<h2>бытовая химия и средства личной гигиены</h2>
-					<p>Мы готовы предложить Вам высококачественные бумажные полотенца, большой выбор туалетной бумаги, салфетки, продукцию медицинского начначения, протирочные материалы для промышленного производства, диспенсеры, держатели, различные расходные материалы, пергаменты, жидкое и пенное мыло. <br>
-					Так же занимаемся комалектацией средствами гигиены:</p>
-					<ul>
-						<li>медицинских учреждений,</li>
-						<li>административных и торговых центров,</li>
-						<li>заведений общепита,</li>
-						<li>школ, ВУЗов и дестких садов,</li>
-						<li>заводов и промышленных предприятий,</li>
-						<li>гостиниц.</li>
-					</ul>
-			
-					<p>Мы постоянно расширяем спектр наших товаров, что бы самые требовательные клиенты могли комплексно обеспечить себя всем необходимым.</p>
+				<span>Уважаемые клиенты, наш бизнес плотно связан с чистящими средствами и уборкой, именно поэтому мы предлагаем вашему вниманию еще одно направление нашего бизнеса - это клининговые услуги. Профессиональная бытовая химия и опытный персонал помогут вам оперативно решить целый спектр задачь связанных с уборкой помещений и очисткой конструкций:</span>
+				<ul>
+					<li>- Мойка остеклений (внутенняя и наружная)</li>
+					<li>- Мойка рекламных вывесок (без разбора конструкции)</li>
+					<li>- Мойка фасадов</li>
+					<li>- Роторная чистка полов</li>
+					<li>- Чистка крыш от снега</li>
+					<li>- Послестроительная уборка</li>
+					<li>- Комплексная уборка</li>
+				</ul>
+			</div>
+			<div class="service2">
+				<div class="delivery__heading">
+					<h2>Доставка</h2>
+					<i class="fa fa-truck fa-2x" aria-hidden="true"></i>
+				</div>
+				<span>Мы берём на себя заботы по доставке ваших заказов. Сделав заказ более чем на 1000 рублей мы сами всё вам привезем.</span>
+				<span>Регионы доставки:</span>
+				<ul>
+					<li>- Ярославль и обл.</li>
+					<li>- Ивановская обл.</li>
+					<li>- Костромская обл.</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- конец секции ДОСТАВКА И КЛИНИНГ -->
+	<!-- начало О НАС  - начало О НАС  - начало О НАС  -->
+	<section class="us__section">
+		<div class="us__container">
+			<div class="us__item">
+				<div class="us__heading">
+					<h2>О Компании</h2>
+					<i class="fa fa-address-card-o fa-2x" aria-hidden="true"></i>
+				</div>
+				<span>Торговый Дом «Истра», входящая в многопрофильную группу компаний «Истра», работает на рынке санитарно-гигиенической продукции с 2003 года. Мы являемся дистрибьютором известных торговых марок TORK, HAYAT, Kiilto. Поставляемая нами продукция позволяет удовлетворить спрос любого заказчика по оснащению офисов, ресторанов, торговых центров. <br><br>
+				Одним из направлений деятельности компании является оказание клининговых услуг и поставки профессиональной химии для уборки и уборочного инвентаря.
+				В сегменте профессиональной химии для прачечных мы предлагаем продукцию ЗАО «Невская химия», которая по своим качественным показателям не уступает продукции ведущих мировых производителей (Эколаб, Джонсон Дайверси), но имеет значительно меньшую стоимость.<br><br>
+				Нашими клиентами являются: ПАО «Сбербанк», МРСК Центр, завод «Комацу», Ярославский педагогический университет им. К.Д. Ушинского, концертно-зрелищный центр «Миллениум» и т.д.</span>
+			</div>
+		</div>
+	</section>
+	<!-- конец О НАС - конец О НАС - конец О НАС -  -->
+	<!-- начало партнеры -->
+	<section class="partners__section">
+		<div class="partners__container">
+			<div class="partners__item item1"></div>
+			<div class="partners__item item2"></div>
+			<div class="partners__item item3"></div>
+			<div class="partners__item item4"></div>
+			<div class="partners__item item5"></div>
+		</div>
+	</section>
+	<!-- конец партнеры -->
+	<!-- начало средств гигиены -->
+	<section class="aids">
+		<div class="aids__container">
+			<div class="aids__img"><img src="img/chem.png" alt="средства гигиены">
+				<div class="aids__buttons buttons">
+					<a href="#" class="buttons__download-price">Скачать прайс</a>
+					<a href="#catalog" class="buttons__catalog">Каталог</a>
 				</div>
 			</div>
-			
-		</section>
-		<!-- конец средств гигиены -->
+			<div class="aids__desc">
+				<h2>бытовая химия и средства личной гигиены</h2>
+				<p>Мы готовы предложить Вам высококачественные бумажные полотенца, большой выбор туалетной бумаги, салфетки, продукцию медицинского начначения, протирочные материалы для промышленного производства, диспенсеры, держатели, различные расходные материалы, пергаменты, жидкое и пенное мыло. <br>
+				Так же занимаемся комалектацией средствами гигиены:</p>
+				<ul>
+					<li>медицинских учреждений,</li>
+					<li>административных и торговых центров,</li>
+					<li>заведений общепита,</li>
+					<li>школ, ВУЗов и дестких садов,</li>
+					<li>заводов и промышленных предприятий,</li>
+					<li>гостиниц.</li>
+				</ul>		
+				<p>Мы постоянно расширяем спектр наших товаров, что бы самые требовательные клиенты могли комплексно обеспечить себя всем необходимым.</p>
+			</div>
+		</div>				
+	</section>
+	<!-- конец средств гигиены -->
 
 		<section class="reviews">
 			<div class="reviews__container">
@@ -225,34 +340,29 @@ include 'catalog.php';
 						<img src="img/face.jpg" alt="face">
 						<figcaption>Владимир<br><span>08.11.2017</span></figcaption>
 					</figure>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est saepe nihil quod sed odio veniam, accusamus dolorum, voluptas, nostrum ab dolore quas consectetur dolorem ullam.</p>
+					<p>Много лет работаем с ТД Истра. Большое ассортимент товаров в наличии, оперативная доставка и гибкость в рассчётах. Чего еще желать?</p>
 				</div>
 				<div class="review">
 					<figure>
 						<img src="img/face.jpg" alt="face">
 						<figcaption>Елена<br><span>08.11.2017</span></figcaption>
 					</figure>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum commodi debitis rerum ipsam modi nemo sint inventore. Tempora corporis et consequuntur est. Perspiciatis, sunt, debitis!</p>
+					<p>Спасибо ТД Истра. Долго искали компанию которая снимет головную боль и укомплектует нашу сеть ресторанов "от и до". И вот мы вас нашли.</p>
 				</div>
 			</div>
 		</section>
-<!-- 	</div> -->
-	<!-- конец враппера -->
 
 	<!-- начало футера -->
 	<div class="footer__navigation">
-
-			<div class="nav__container">
-				
-					<ul class="container">
-						<li class="link"><a href="#">главная</a></li>
-						<li class="link"><a href="#">каталог</a></li>
-						<li class="link"><a href="#">услуги</a></li>
-						<li class="link"><a href="#">прайс</a></li>
-						<li class="link"><a href="#">контакты</a></li>
-					</ul>
-				
-			</div>
+		<div class="nav__container">				
+				<ul class="container">
+					<li class="link"><a href="#">главная</a></li>
+					<li class="link"><a href="#catalog">каталог</a></li>
+					<li class="link"><a href="servisec.php">услуги</a></li>
+					<li class="link"><a href="delivery.php">О компании</a></li>
+					<li class="link"><a href="#">контакты</a></li>
+				</ul>				
+		</div>
 <!-- 		 -->
 	</div>
 	<footer>
@@ -273,16 +383,9 @@ include 'catalog.php';
 			<div class="footer__col footer__mail">
 				<h4>e-mail:</h4>
 				<a href="mailto:tdistra@mail.ru">tdistra@mail.ru</a>
-			</div>
-		
-		</div>
-			
+			</div>		
+		</div>			
 	</footer>
 	<!-- конец футера -->
-		<script>
-		$(document).ready(function(){
-			$(".category").dcAccordion();
-		});
-	</script>
 </body>
 </html>
