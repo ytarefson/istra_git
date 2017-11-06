@@ -123,7 +123,7 @@
   {
     "id":222222, 
     "name": "Жидкое мыло 5л",
-    "href": "../img/products/red2.jpg",
+    "href": "../img/products/222222.jpg",
     "price": 1000,
     "category": "liquid-soap",
     "brand": "russia",
@@ -133,7 +133,7 @@
   {
     "id":333333, 
     "name": "Жидкое крем-мыло 5л",
-    "href": "../img/products/green2.jpg",
+    "href": "../img/products/333333.jpg",
     "price": 1000,
     "category": "liquid-soap",
     "brand": "russia",
@@ -191,7 +191,7 @@
   {
     "id":125250, 
     "name": "Бумажные медицинские простыни Tork",
-    "href": "../img/products/125250.jpg",
+    "href": "../img/products/420401.jpg",
     "price": 508.03,
     "category": "medical",
     "brand": "tork",
@@ -200,7 +200,7 @@
   {
     "id":"pm5050", 
     "name": "Бумажные медицинские простыни",
-    "href": "../img/products/pm5050.jpg",
+    "href": "../img/products/420401.jpg",
     "price": 320,
     "category": "medical",
     "brand": "russia",
@@ -209,7 +209,7 @@
   {
     "id":444444, 
     "name": "Бахилы п/эт. Эконом",
-    "href": "../img/products/bluesocks.jpg",
+    "href": "../img/products/444444.jpg",
     "price": 1.31,
     "category": "medical",
     "brand": "russia",
@@ -218,7 +218,7 @@
   {
     "id":555555, 
     "name": "Бахилы п/эт. Прочные",
-    "href": "../img/products/bluesocks.jpg",
+    "href": "../img/products/444444.jpg",
     "price": 1.67,
     "category": "medical",
     "brand": "russia",

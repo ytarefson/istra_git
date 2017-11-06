@@ -7,18 +7,18 @@ $(document).ready( function() {
       lazyLoad:true,
       responsive: {
         500: {
-          items : 3
+          items : 3,
         },
 
         700: {
-          items : 4
+          items : 4,
         },
         960: {
-          items: 5
+          items: 5,
         }
       }
   });
-  $.ajax({
+/*  $.ajax({
     type: "GET",
     url: 'js/istra.json',    
     dataType: "json",
@@ -28,31 +28,14 @@ $(document).ready( function() {
         result += render(data[i]);
       }
       $('.new-cat__content').text('');
-      $('.new-cat__content').append(result);
-      
+      $('.new-cat__content').append(result);      
     },
-  });
+  });*/
   
   $('.new-cat__link').on('click', function(event) { 
-      event.preventDefault();
-      var id = this.id;      
-      $.ajax({
-      type: "GET",
-      content: 'this',
-      url: 'js/istra.json',      
-      dataType: "json",
-      success: function(data) {
-        var result = "";
-
-        for (var i = 1; i<data.length ; i++) {      
-          if (data[i].category_id==id) {
-            result += render(data[i]);
-          }
-        }
-        $('.new-cat__content').text('');
-        $('.new-cat__content').append(result);
-        },
-    });
+    event.preventDefault();
+    var id = this.id;      
+    selectCategory(id);
   })
 
   $('.new-cat__category-link').on('click', function(event) {
@@ -60,16 +43,65 @@ $(document).ready( function() {
     var category = this.id;
     get_category = '#'+category+'~ ul';
     var sublist = $('.new-cat__sublist');
-    $(get_category).toggle('visible');
-    
-
+    $(get_category).toggle('visible');    
   });
-  
 
-  function visibleOn(){
-    
-  };
+  $('#button_5').on('click', function(event) {
+    event.preventDefault();
+    selectCategory(5);
+  })
 
+  $('#button_9').on('click', function(event) {
+    event.preventDefault();
+    selectCategory(9);
+  })
+
+  var headerHeight = $('.nav').outerHeight();
+
+  $('.nav-link').click(function(e) {
+    e.preventDefault();
+    var linkHref = $(this).attr('href');
+    console.log('clicked');
+    $('html,body').animate({
+      scrollTop: $(linkHref).offset().top - headerHeight
+    }, 200);  
+  });
+
+
+/*  $( ".nav-link" ).click(function(e) {
+     e.preventDefault();
+  $( "htmlbody" ).animate({
+    scrollTop: 800
+  }, 1000, function() {
+    // Animation complete.
+  });
+});*/
+
+
+
+
+
+function selectCategory(number) {
+  $('.new-cat__content').fadeOut(500);
+  var id = number; 
+  $.ajax({
+  type: "GET",
+  content: 'this',
+  url: 'js/istra.json',      
+  dataType: "json",
+  success: function(data) {
+    var result = "";
+    for (var i = 1; i<data.length ; i++) {      
+      if (data[i].category_id==id) {
+        result += render(data[i]);
+      }
+    }
+    setTimeout(function() {
+      $('.new-cat__content').fadeIn(1000).text('').append(result);
+    }, 700);       
+    },
+  });
+}
 
   function render(data) {
     var result = '';
